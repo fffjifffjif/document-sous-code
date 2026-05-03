@@ -1,0 +1,222 @@
+@charset "UTF-8";
+@font-face {
+	font-family: "ヤデワのジ";
+	src: url(../font/YDWyadewanoji.otf) format("opentype");
+	font-display: swap;
+}
+label {
+	display: block;
+}
+
+html {
+	overflow: hidden;
+}
+
+header {
+	/*ヘッダー(常に出てるやつ)のcss*/
+}
+header input {
+	display: none;
+}
+header label {
+	display: block;
+	width: 0;
+	height: 0;
+}
+header .header {
+	z-index: 900;
+	position: relative;
+	display: flow-root;
+	width: 300vw;
+	min-width: 340vh;
+	height: 300vh;
+	min-height: 150vw;
+	overscroll-behavior: none;
+	background-color: rgb(173.4, 173.4, 173.4);
+	transform: translate(-50%, -15vh) rotate(90deg);
+	transform-origin: 50% 15vh;
+	transition: 1s;
+	transition-delay: 0.1s;
+}
+header .header .hbg-open-icon {
+	position: absolute;
+	display: flex;
+	background-color: rgb(173.4, 173.4, 173.4);
+	width: 45px;
+	height: 50px;
+	padding: 10px;
+	top: calc(15vh - 50px);
+	left: 50%;
+}
+header .header .hbg-open-icon div {
+	background-color: black;
+	width: 5px;
+	height: 30px;
+}
+header .header .hbg-open-icon div + div {
+	margin-left: 5px;
+}
+header .header .hgb-close-icon {
+	position: absolute;
+	display: flex;
+	background-color: rgb(173.4, 173.4, 173.4);
+	width: 45px;
+	height: 50px;
+	padding: 10px;
+	top: 15vh;
+	left: calc(50% + 10px);
+}
+header .header .hgb-close-icon div {
+	background-color: black;
+	width: 5px;
+	height: 30px;
+	transform: rotate(45deg);
+	transform-origin: center;
+}
+header .header .hgb-close-icon div + div {
+	transform: translateX(-5px) rotate(135deg);
+	transform-origin: center;
+}
+header .header p {
+	position: absolute;
+	top: calc(15vh - 50px);
+	width: 100%;
+	left: 50vh;
+	padding-left: 50%;
+	font-family: "ヤデワのジ", sans-serif;
+	user-select: none;
+	font-size: 40px;
+	transition: 1s;
+	transition-delay: 0.1s;
+}
+header input:checked ~ label .header {
+	transform: translate(-50%, -15vh);
+	transition-delay: 0s;
+}
+header input:checked ~ label .header p {
+	width: 100%;
+	left: 50vw;
+	padding-left: 50%;
+	transform: translate(-50px, 50px);
+	transition-delay: 0s;
+}
+@media (max-height: 334px) {
+	header .header {
+		transform: translate(-50%, -50px) rotate(90deg);
+		transform-origin: 50% 50px;
+	}
+	header .header .hbg-icon {
+		top: 0;
+	}
+	header .header P {
+		top: 0;
+	}
+	header input:checked ~ label .header {
+		transform: translate(-50%, -50px);
+	}
+	header input:checked ~ label .header p {
+		transform: translate(0, 50px);
+	}
+}
+
+.hbg {
+	z-index: 1000;
+	position: sticky;
+	top: 0;
+	left: 0;
+}
+.hbg-content {
+	position: relative;
+	writing-mode: vertical-rl;
+}
+.hbg-content a {
+	border-radius: 10px;
+}
+.hbg-content-1 {
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	width: 0px;
+	height: 120vh;
+	color: #fff;
+	font-size: 0px;
+	background-color: black;
+	transition: 1s;
+	transition-delay: 0s;
+}
+input:checked ~ .hbg .hbg-content .hbg-content-1 {
+	left: 20vw;
+	top: 20vh;
+	width: 50px;
+	font-size: 40px;
+	transform: translateX(-50%);
+	transition: 1s ease-out;
+	transition-delay: 0.2s;
+}
+.hbg-content-2 {
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	width: 0px;
+	height: 120vh;
+	color: #fff;
+	font-size: 0px;
+	background-color: black;
+	transition: 1s;
+	transition-delay: 0s;
+}
+input:checked ~ .hbg .hbg-content .hbg-content-2 {
+	left: 40vw;
+	top: 20vh;
+	width: 50px;
+	font-size: 40px;
+	transform: translateX(-50%);
+	transition: 1s ease-out;
+	transition-delay: 0.2s;
+}
+.hbg-content-3 {
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	width: 0px;
+	height: 120vh;
+	color: #fff;
+	font-size: 0px;
+	background-color: black;
+	transition: 1s;
+	transition-delay: 0s;
+}
+input:checked ~ .hbg .hbg-content .hbg-content-3 {
+	left: 60vw;
+	top: 20vh;
+	width: 50px;
+	font-size: 40px;
+	transform: translateX(-50%);
+	transition: 1s ease-out;
+	transition-delay: 0.2s;
+}
+.hbg-content-4 {
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	width: 0px;
+	height: 120vh;
+	color: #fff;
+	font-size: 0px;
+	background-color: black;
+	transition: 1s;
+	transition-delay: 0s;
+}
+input:checked ~ .hbg .hbg-content .hbg-content-4 {
+	left: 80vw;
+	top: 20vh;
+	width: 50px;
+	font-size: 40px;
+	transform: translateX(-50%);
+	transition: 1s ease-out;
+	transition-delay: 0.2s;
+}
+
+.notouch {
+	pointer-events: none;
+}

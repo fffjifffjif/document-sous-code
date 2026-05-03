@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@font-face {
+	font-family: "ヤデワのジ";
+	src: url(../font/YDWyadewanoji.otf) format("opentype");
+	font-display: swap;
+}
+.container {
+	position: absolute;
+	top: 0;
+	left: 15vh;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	width: calc(100vw - 15vh);
+	height: 100vh;
+}
+
+.content1,
+.content2 {
+	height: 100vh;
+	background: linear-gradient(blue, pink);
+	display: flex;
+	justify-content: center;
+}
+.content1 .title,
+.content2 .title {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+}
+.content1 .title .triangle,
+.content2 .title .triangle {
+	width: 35vw;
+	height: 35vw;
+	border-radius: 21% 79% 45% 55%/19% 24% 76% 81%;
+	background-image: url(../img/retoro.jpeg);
+	background-size: cover;
+	background-position: center;
+}
+.content1 .title a,
+.content2 .title a {
+	height: fit-content;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 1px 1px 2px black;
+}
+
+.content2 {
+	justify-content: space-evenly;
+	align-items: center;
+}
+.content2 > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+.content2 > div h2 {
+	text-align: start;
+	width: fit-content;
+	height: fit-content;
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+.content2 > div p {
+	max-width: 35vw;
+	width: fit-content;
+	height: fit-content;
+	font-size: 26px;
+	word-break: break-word;
+}
+.content2 > div button {
+	margin: 40px auto 0 auto;
+	padding: 10px;
+	height: 40px;
+	background-color: aquamarine;
+	border-radius: 30px;
+}
+.content2 .img {
+	height: fit-content;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.content2 .img img {
+	width: 50vw;
+	height: auto;
+	object-fit: contain;
+}
