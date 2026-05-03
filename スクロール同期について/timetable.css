@@ -1,0 +1,291 @@
+@charset "utf-8";
+@import "../destyle.css";
+@import "import-font.css";
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	background-color: #ebeeeb;
+}
+
+.container {
+	font-family: "TsukuhouMincho";
+}
+
+.container h1 {
+	margin: 20px 20px;
+	font-size: 36px;
+}
+
+.set-date {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	border-bottom: 2px solid #4994c6;
+	margin-bottom: 20px;
+}
+
+.set-date label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 120px;
+	height: 50px;
+	border-radius: 20px 20px 0 0;
+	background-color: #fff;
+}
+
+.set-date label:nth-child(2) {
+	margin-right: 20px;
+}
+
+.set-date label p {
+	font-size: 24px;
+	color: #4994c6;
+}
+
+#day1-label,
+#day2-label {
+	transition: 0.5s;
+}
+
+input[type="radio"]:not(:checked) + label:hover {
+	box-shadow: #727272 inset 2px 2px 2px;
+}
+
+input[type="radio"]:checked + label {
+	transform: scale(1.1);
+	transform-origin: bottom;
+	background-color: #4994c6;
+}
+
+input[type="radio"]:checked + label p {
+	color: #fff;
+}
+
+.timetable-container {
+	position: relative;
+	margin: 0 5%;
+	width: 95%;
+	height: calc(70vh + 50px);
+}
+
+.timetable {
+	position: absolute;
+	top: 49px;
+	display: flex;
+	width: calc(95vw - 60px);
+	height: 70vh;
+	margin-left: 50px;
+	overflow: scroll;
+}
+
+.timetable-index,
+.time {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	width: calc(95vw - 60px);
+	background-color: #ebeeeb;
+	overflow: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.timetable-index::-webkit-scrollbar,
+.time::-webkit-scrollbar {
+	display: none;
+}
+
+.timetable-index {
+	top: 0;
+	left: 50px;
+	overflow-y: hidden;
+}
+
+.time {
+	flex-direction: column;
+	top: 0;
+	left: 0;
+	width: 50px;
+	min-width: 0;
+	border-right: 1px solid #000;
+	overflow: hidden;
+}
+
+.timetable-index > div {
+	flex-shrink: 0;
+	position: relative;
+	width: calc(30vw + 2px);
+	min-width: 202px;
+	height: 50px;
+	border-bottom: 2px solid #000;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	font-size: 20px;
+}
+
+.timetable-index > div:nth-child(1) {
+	width: calc(30vw + 3px);
+}
+
+.time > div:nth-child(1) {
+	flex-shrink: 0;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-bottom: 2px solid #000;
+	font-size: 20px;
+}
+
+.time > div:nth-child(2) {
+	height: 70vh;
+	overflow: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.time > div:nth-child(2)::-webkit-scrollbar {
+	display: none;
+}
+
+.timetable-index > div:nth-child(5) {
+	width: calc(30vw + 12px);
+	min-width: 212px;
+}
+
+.timetable > ul > span {
+	position: sticky;
+	width: calc(100% + 2px);
+	height: 15px;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.timetable > ul > span {
+	top: 0;
+}
+
+.timetable ul,
+#time {
+	flex-shrink: 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: calc(30vw + 2px);
+	min-width: 202px;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+#time::-webkit-scrollbar {
+	display: none;
+}
+
+#gym-schedule {
+	width: calc(30vw + 3px);
+}
+
+#time {
+	width: 50px;
+	min-width: 0;
+	border-left: 0px;
+	padding-top: 15px;
+	border-right: 0;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+#time::-webkit-scrollbar {
+	display: none;
+}
+
+#time li {
+	display: flex;
+}
+
+#time li p {
+	width: 50px;
+	padding-right: 5px;
+	text-align: end;
+	font-size: 16px;
+	padding: 60px 5px 0;
+	margin-bottom: 60px;
+}
+
+ul#time .day1:first-of-type p {
+	padding-top: 0;
+}
+
+#time #first-day2 p {
+	padding-top: 0;
+}
+
+.timetable ul li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	background-color: #f7c9db;
+	border-radius: 20px;
+	box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.5);
+	word-break: break-word;
+	overflow-y: auto;
+	z-index: 15;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.timetable ul li::-webkit-scrollbar {
+	display: none;
+}
+
+.timetable ul li p {
+	width: 90%;
+	font-size: 20px;
+	text-align: center;
+}
+
+#gym-schedule,
+#stage-schedule {
+	background-color: #d6dcb6;
+}
+
+#martial-art-schedule,
+#audiovisual-schedule {
+	background-color: #d3def1;
+}
+
+.border1,
+.border2 {
+	position: absolute;
+	top: 25.2px;
+	width: 100%;
+	height: 2px;
+	background: repeating-linear-gradient(
+		to right,
+		#000,
+		#000 10px,
+		rgba(0, 0, 0, 0) 10px,
+		rgba(0, 0, 0, 0) 20px
+	);
+	transform: translateY(-50%);
+	z-index: 10;
+}
+
+.border2 {
+	background: repeating-linear-gradient(
+		to right,
+		#936a7a,
+		#936a7a 10px,
+		rgba(0, 0, 0, 0) 10px,
+		rgba(0, 0, 0, 0) 20px
+	);
+}
