@@ -19,4 +19,20 @@ jsの順番に解説していきます。
 　https://qiita.com/kins/items/94e5c8cd557ba039c403
 
 ・function circleSize(w, h, element, box_h)
-　この関数は、ヘッダーの円の部分を高さを中心に合わせ、少し画面横に出るように位置を調整する関数です。
+　この関数は、ヘッダーの円上に点要素を配置する関数です。
+
+・function stealthCircleSize(w, h, element, box_h)
+　この関数は、ヘッダーの円上の点要素を配置する座標を返す関数です。
+　やっていることがほとんど上の関数と同じなので、典型的なゴミコードです。
+
+・let circle_position = [];
+　この配列に、円ヘッダーの点要素たちを入れています。
+
+・function setFirstDotsOnCircle()
+　この関数は、HTMLがはじめに読み込まれたときに点要素を配置する関数です。
+　＜関数の流れ＞
+　まずはじめに配列を初期化します。
+　その次に、HTMLに書いてある".circle-dot"要素を取得して、その数を数えます。
+　関数に必要な定数を定義します。
+　最後に、点要素を上から順に入れて、function circleSize(w, h, element, box_h)　関数に突っ込んで、描画します。
+
