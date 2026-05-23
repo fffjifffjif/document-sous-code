@@ -36,3 +36,19 @@ jsの順番に解説していきます。
 　関数に必要な定数を定義します。
 　最後に、点要素を上から順に入れて、function circleSize(w, h, element, box_h)　関数に突っ込んで、描画します。
 
+　➤const dots = document.getElementsByClassName("circle-dot");
+　　const dot_length = dots.length;
+　　".circle-dot"要素を取得して、その数を数えてるところです。
+　➤circle_position.push(circleSize(w, h, dots[i], (h * (i + 1)) / (dot_length + 1)));
+　　引数がきもいですが、点を描写して、その戻り値を配列に格納しています。
+
+・function setDotsOnCircle()
+　この関数は、アニメーションをしながら点を動かす関数です。
+　基本はsetFirstDotsOnCircle()と同じですが、もともと点要素が画面上に存在しているので、アニメーションをしながら位置を移動するようにしています。
+
+　➤	let old_circle_position = circle_position;
+　　関数の引数で用いるため、動かす前の点の位置を残しておきます。
+　➤setAnimationDot()
+　　後で説明します。
+
+・function setDotsOpenCircle(index)
